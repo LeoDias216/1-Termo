@@ -30,6 +30,10 @@ def brigada():
         print("Bem vindo ao site da empresa Magnum Enterprises")
         print(f"Até o momento temos {funcionarios_cadastrados} funcionários cadastrados e {treinamentos_em_dia} treinamentos em dia")
         nome_funcionario = input("Digite seu nome:")
+        if nome_funcionario == "Encerrar":
+            print("Encerrando sistemas...")
+            time.sleep(1)
+            break
         setor_funcionario = input("Digite seu setor (Elétrica ou Altura):")
         if setor_funcionario == "Elétrica":
             print("EPI necessário:")
@@ -64,5 +68,4 @@ def brigada():
         print(f"Cadastro diário concluído! Bom trabalho {nome_funcionario}")
         funcionarios_cadastrados += 1
         time.sleep(2)
-
 print(brigada())
