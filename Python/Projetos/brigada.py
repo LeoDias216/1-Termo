@@ -68,4 +68,4 @@ def brigada():
         print(f"Cadastro diário concluído! Bom trabalho {nome_funcionario}")
         funcionarios_cadastrados += 1
         time.sleep(2)
-print(brigada())
+brigada()
