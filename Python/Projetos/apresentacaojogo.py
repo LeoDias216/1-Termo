@@ -2,12 +2,27 @@ import time
 vida_jogador = 15
 vida_inimigo= 20
 
+def orc():
+    print("╔════════════════════════════╗  ")
+    print("║          ,      ,          ║  ")
+    print("║         /(.-''-.)\         ║  ")
+    print("║     |\  \/      \/  /|     ║  ")
+    print("║     | \ / =.  .= \ / |     ║  ")
+    print("║     \( \   o\/o   / )/     ║  ")
+    print("║      \_, '-/  \-' ,_/      ║  ")
+    print("║        /   \__/   \        ║  ")
+    print("║        \ \__/\__/ /        ║  ")
+    print("║      ___\ \|--|/ /___      ║  ")
+    print("║    /`    \      /    `\    ║  ")  
+    print("╚════════════════════════════╝  ")    
+     
+  
 def status():
     print("╔═══════════════════════════╗")
     print("║   == STATUS DE JOGO  ==   ║")
     print("║═══════════════════════════║")
-    print(f"║ Vida do Jogador: {vida_jogador}/15    ║")
-    print(f"║ Vida do Inimigo: {vida_inimigo}/20    ║")
+    print(f"║ Vida do Jogador: {vida_jogador:02}/15    ║")
+    print(f"║ Vida do Inimigo: {vida_inimigo:02}/20    ║")
     print("╚═══════════════════════════╝")
 
 def acoes():
@@ -21,7 +36,7 @@ def acoes():
         print("Você ataca o Orc com sua espada")
         time.sleep(1)
         print("4 de dano causado!")
-        vida_inimigo -= 4
+        max(0, vida_inimigo - 4)
     elif opcao == 2:
         print("Você escolheu se defender com seu escudo")
         time.sleep(1)
@@ -36,9 +51,8 @@ def acoes():
             print("Você bebe a poção...")
             time.sleep(1)
             print("Recuperou 5 pontos de vida!")
+            vida_jogador = min(15, vida_jogador + 5)
 
-
-        
 
 while True:
     print("╔════════════════════════════════════════════════════════════════════════════════╗")
@@ -72,10 +86,17 @@ while True:
     print("╚════════════════════════════════════════════════════════════════════════════════╝")
     iniciar = int(input("Opção: "))
     if iniciar == 1:
-        status()
-        acoes()
+        while vida_jogador > 0 and vida_inimigo > 0:
+            orc()
+            status()
+            acoes()
 
-
+        if vida_inimigo <= 0:
+            print("\n🎉 Vitória! Você derrotou o Orc e salvou a princesa!\n")
+        elif vida_jogador <= 0:
+            print("")
+        time.sleep(2)
+        
     elif iniciar == 2:
         print("Encerrando jogo...")
         time.sleep(2)
