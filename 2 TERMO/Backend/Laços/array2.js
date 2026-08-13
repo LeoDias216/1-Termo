@@ -1,4 +1,4 @@
-const entrada = require('readline.sync');
+const entrada = require('readline-sync');
 
 console.log("=== SISTEMA DE CONTROLE DE QUALIDADE - PESAGEM ===");
 
@@ -12,7 +12,7 @@ const qtdpecas = entrada.questionInt("Quantas pecas deseja avaliar? ");
 for (let i = 0; i < qtdpecas; i++) {
     let peso = entrada.questionFloat(`Digite o peso da peca ${i + 1} (kg): `);
 
-    pesos.push(pesos); // Guarda no prédio/Array
+    pesos.push(peso); // Guarda no prédio/Array
     somaTotal += peso; // Soma no cofre/Acumulador
 }
 
