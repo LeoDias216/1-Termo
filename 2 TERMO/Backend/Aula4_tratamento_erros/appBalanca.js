@@ -10,6 +10,9 @@ while (peso != "sair") {
         
         const resultadoFinal = balanca.verificarPeso(peso)
 
-        console.log
+        console.log(`O peso consultado foi: ${resultadoFinal}`)
+    }
+    catch {
+        console.log(`⚠️ ALERTA: ${Erro.mensansagen}`)
     }
 }
