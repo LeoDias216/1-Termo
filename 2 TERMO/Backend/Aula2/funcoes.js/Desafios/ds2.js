@@ -8,4 +8,3 @@ const qtdParcelas = entrada.questionInt("Quer parcelar em quantas vezes(max 12)?
 for (let i = 0; i < qtdParcelas; i++) {
     console.log(`Parcela ${i + 1}: R$ ${(valorTotal / qtdParcelas).toFixed(2)}`)
 }
-
