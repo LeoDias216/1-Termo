@@ -1,0 +1,40 @@
+body {
+    background-color:bisque;
+}
+
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: grey;
+}
+
+nav a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    list-style: none;
+    padding: 30px;
+}
+
+.bemvindo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: coral;
+    margin: 30px;
+}
+
+.tecnologia {
+    background-color: orangered;
+}
+
+img {
+    height: 200px;
+    position: sticky;
+    top: 10px;
+    left: 270px;
+}
+
+footer {
+    background-color: whitesmoke;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
