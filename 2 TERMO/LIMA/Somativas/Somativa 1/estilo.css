@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: darkgrey;
+}
+
+header {
+    background-color: crimson;
+    text-align: center;
+    color: aliceblue;
+    padding: 20px;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px;
+}
+
+footer {
+    background-color: crimson;
+    text-align: center;
+    color: aliceblue;
+    padding: 2px;
+}
+
+.bemvindo {
+    margin: 10px;
+    background-color: white;
+    h2 {
+        color: darkred;
+        text-align: center;
+    }
+}
+
+.sobre {
+    background-color: white;
+    margin: 10px;
+    h2 {
+        color: darkred;
+        text-align: center;
+    }
+}
+
+.nossosservicos {
+    background-color: white;
+    h3 {
+        color: darkred;
+        text-align: center;
+    }
+}
+
+.nossaequipe {
+    background-color: white;
+    margin: 10px;
+    text-align: center;
+    h3 {
+        color: darkred;
+        text-align: center;
+    }
+}
+
+.nossosprojetos {
+    background-color: white;
+    margin: 10px;
+    h3 {
+        color: darkred;
+        text-align: center;
+    }
+}
+
+.contato {
+    background-color: white;
+    margin: 10px;
+    h3 {
+        color: darkred;
+        text-align: center;
+    }
+}
+
+.negrito {
+    color: darkred;
+    font-weight: bolder;
+}
+
+.artigo {
+    background-color: bisque;
+    margin: 20px;
+    border-color: dimgray;
+    border: solid;
+    border-width: 1px;
+}
+
+.tituloservicos {
+    color: darkred;
+    font-weight: bolder;
+    margin: 10px;
+}
+
+p {
+    margin: 10px;
+}
+
+button {
+    background-color: crimson;
+    color: white;
+}
