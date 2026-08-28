@@ -1,0 +1,283 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil MS Sans Serif;}{\f1\fnil\fcharset0 MS Sans Serif;}}
+{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\b\f0\fs16 001 - Atributo: \cf2\b0 Ano_lancamento\cf1\b 
+\par \cf0\b0 Char(4), ano de lancamento da marca
+\par 
+\par \cf1\b 002 - Atributo: \cf2\b0 Ano_lancamento\cf1\b 
+\par \cf0\b0 Char(4), ano de lancamento do modelo
+\par 
+\par \cf1\b 003 - Atributo: \cf2\b0 Ativo\cf1\b 
+\par \cf0\b0 Enum("Ativo", "Inativo") Default "Ativo", Status do veiculo
+\par 
+\par \cf1\b 004 - Atributo: \cf2\b0 CPF\cf1\b 
+\par \cf0\b0 varchar(14) not null, CPF do cliente
+\par 
+\par \cf1\b 005 - Atributo: \cf2\b0 CPF\cf1\b 
+\par \cf0\b0 Varchar(14) Not Null Unique, CPF do funcionario
+\par 
+\par \cf1\b 006 - Atributo: \cf2\b0 CPF\cf1\b 
+\par \cf0\b0 Varchar(14) Not Null Unique, CPF do cliente no pagamento
+\par 
+\par \cf1\b 007 - Atributo: \cf2\b0 Cargo\cf1\b 
+\par \cf0\b0 Varchar(30) Not Null, cargo do funcionario
+\par 
+\par \cf1\b 008 - Atributo: \cf2\b0 Carro\cf1\b 
+\par \cf0\b0 Enum ("Carro", "Moto") Not Null, tipo do veiculo
+\par 
+\par \cf1\b 009 - Atributo: \cf2\b0 Carro\cf1\b 
+\par \cf0\b0 Enum("Carro", "Moto"), tipo do veiculo
+\par 
+\par \cf1\b 010 - Atributo: \cf2\b0 Carro_mais_usado\cf1\b 
+\par \cf0\b0 Varchar(60), carro em que a peca \f1\'e9 mais usada
+\par \f0 
+\par \cf1\b 011 - Entidade: \cf2\b0 Clientes\cf1\b 
+\par \cf0\b0 Descri\f1\'e7\'e3o: A entidade Clientes armazena os dados dos clientes, como nome, data de nascimento, CPF,etc.
+\par Atributos: Id_cliente, Nome, CPF, Data_nasc, Endereco, Numero
+\par Rela\'e7\'f5es: Clientes Pedem Servi\'e7os (1,n) (0,n)
+\par \f0 
+\par \cf1\b 012 - Rela\f1\'e7\'e3o: \cf2\b0 Contem\cf1\b 
+\par \cf0\b0\f0 Marcas Contem Modelos (1,n) (1,n)
+\par 
+\par \cf1\b 013 - Atributo: \cf2\b0 Credito\cf1\b 
+\par \cf0\b0 Enum("Debito", "Credito", "Pix") Default "Credito", o tipo de pagamento escolhido do cliente
+\par 
+\par \cf1\b 014 - Atributo: \cf2\b0 Data_nasc\cf1\b 
+\par \cf0\b0 Date not null, Data de nascimento do cliente
+\par 
+\par \cf1\b 015 - Atributo: \cf2\b0 Data_nasc\cf1\b 
+\par \cf0\b0 Date Not Null, data de nascimento do funcionario
+\par 
+\par \cf1\b 016 - Atributo: \cf2\b0 Debito\cf1\b 
+\par \cf0\b0 Enum("Debito", "Credito", "Pix") Default "Credito", o tipo de pagamento escolhido do cliente
+\par 
+\par \cf1\b 017 - Atributo: \cf2\b0 Desconto\cf1\b 
+\par \cf0\b0 Varchar(10), o desconto do pagamento, caso houver
+\par 
+\par \cf1\b 018 - Atributo: \cf2\b0 Endereco\cf1\b 
+\par \cf0\b0 varchar(80) not null, Endereco do cliente
+\par 
+\par \cf1\b 019 - Rela\f1\'e7\'e3o: \cf2\b0 Entregam\cf1\b 
+\par \cf0\b0\f0 Fornecedores Entregam Pecas (1,n) (1,n)
+\par 
+\par \cf1\b 020 - Atributo: \cf2\b0 Fabricante\cf1\b 
+\par \cf0\b0 Varchar(30) Not Null, fabricante da marca
+\par 
+\par \cf1\b 021 - Entidade: \cf2\b0 Fornecedores\cf1\b 
+\par \cf0\b0 Descri\f1\'e7\'e3o: A entidade Fornecedores armazena os dados dos fornecedores de pe\'e7as, como nome, pe\'e7a entregue, pre\'e7o,etc.
+\par Atributos: Id_fornecedor, Nome, Peca_entregue, Preco, Tempo_entrega, Localizacao
+\par Rela\'e7\'f5es: Fornecedores Entregam Pecas (1,n) (1,n)
+\par \f0 
+\par \cf1\b 022 - Entidade: \cf2\b0 Funcionarios\cf1\b 
+\par \cf0\b0 Descri\f1\'e7\'e3o: A entidade Funcionarios armazena os dados dos funcionarios da oficina, como nome, data de nascimento, CPF,etc.
+\par Atributos: Id_funcionario, Nome, Data_nasc, CPF, Salario, Cargo
+\par Rela\'e7\'f5es: Funcionarios Gerenciam Ordens de servico (1,n) (1,n)
+\par \f0 
+\par \cf1\b 023 - Atributo: \cf2\b0 Garantia\cf1\b 
+\par \cf0\b0 Date Not Null, garantia do servico
+\par 
+\par \cf1\b 024 - Rela\f1\'e7\'e3o: \cf2\b0 Geram\cf1\b 
+\par \cf0\b0\f0 Servicos Geram Ordens de servicos (1,n) (1,n)
+\par 
+\par \cf1\b 025 - Rela\f1\'e7\'e3o: \cf2\b0 Gerenciam\cf1\b 
+\par \cf0\b0\f0 Funcionarios Gerenciam Ordens de servico (1,n) (1,n)
+\par 
+\par \cf1\b 026 - Atributo: \cf2\b0 Id_cliente\cf1\b 
+\par \cf0\b0 Int Auto Increment Primary Key, ID do cliente
+\par 
+\par \cf1\b 027 - Atributo: \cf2\b0 Id_fornecedor\cf1\b 
+\par \cf0\b0 Int Auto Increment Primary Key, ID do fornecedor
+\par 
+\par \cf1\b 028 - Atributo: \cf2\b0 Id_funcionario\cf1\b 
+\par \cf0\b0 Int Auto Increment Primary Key, ID do funcionario
+\par 
+\par \cf1\b 029 - Atributo: \cf2\b0 Id_marca\cf1\b 
+\par \cf0\b0 Int Auto Increment Primary Key, ID da marca
+\par 
+\par \cf1\b 030 - Atributo: \cf2\b0 Id_modelo\cf1\b 
+\par \cf0\b0 Int Auto Increment Primary Key, ID do modelo
+\par 
+\par \cf1\b 031 - Atributo: \cf2\b0 Id_ordem\cf1\b 
+\par \cf0\b0 Int Auto Increment Primary Key, ID da ordem de servico
+\par 
+\par \cf1\b 032 - Atributo: \cf2\b0 Id_pagamento\cf1\b 
+\par \cf0\b0 Int Auto Increment Primary Key, ID do pagamento
+\par 
+\par \cf1\b 033 - Atributo: \cf2\b0 Id_peca\cf1\b 
+\par \cf0\b0 Int Auto Increment Primary Key, ID da peca
+\par 
+\par \cf1\b 034 - Atributo: \cf2\b0 Id_servico\cf1\b 
+\par \cf0\b0 Int Auto Increment Primary Key, ID do servico
+\par 
+\par \cf1\b 035 - Atributo: \cf2\b0 Id_veiculo\cf1\b 
+\par \cf0\b0 Int Auto Increment Primary Key, ID do veiculo
+\par 
+\par \cf1\b 036 - Atributo: \cf2\b0 Inativo\cf1\b 
+\par \cf0\b0 Enum("Ativo", "Inativo") Default "Ativo", Status do veiculo
+\par 
+\par \cf1\b 037 - Atributo: \cf2\b0 Localizacao\cf1\b 
+\par \cf0\b0 Char(30), a localizacao da fornecedora
+\par 
+\par \cf1\b 038 - Atributo: \cf2\b0 Localizacao\cf1\b 
+\par \cf0\b0 Char(30), localizacao da empresa principal da marca
+\par 
+\par \cf1\b 039 - Atributo: \cf2\b0 Maior_fabricante\cf1\b 
+\par \cf0\b0 Varchar(30), maior fabricante do modelo
+\par 
+\par \cf1\b 040 - Atributo: \cf2\b0 Marca\cf1\b 
+\par \cf0\b0 Varchar(30) Not Null, marca do veiculo
+\par 
+\par \cf1\b 041 - Entidade: \cf2\b0 Marcas\cf1\b 
+\par \cf0\b0 Descri\f1\'e7\'e3o: A entidade Marcas armazena os dados das marcas dos autom\'f3veis, como nome, Fabricante, Ano de lan\'e7amento,etc.
+\par Atributos: Id_marca, Nome, Fabricante, Ano_lancamento, Localizacao, Modelo_mais_famoso
+\par Rela\'e7\'f5es: Marcas Cont\'e9m Modelos (1,n) (1,n)
+\par \f0 
+\par \cf1\b 042 - Atributo: \cf2\b0 Material\cf1\b 
+\par \cf0\b0 Varchar(30) Not Null, material do qual a peca e feita
+\par 
+\par \cf1\b 043 - Atributo: \cf2\b0 Modelo\cf1\b 
+\par \cf0\b0 Varchar(30) Not Null, modelo do veiculo
+\par 
+\par \cf1\b 044 - Atributo: \cf2\b0 Modelo_mais_famoso\cf1\b 
+\par \cf0\b0 Varchar(60) Not Null, modelo de veiculo mais famoso da marca
+\par 
+\par \cf1\b 045 - Entidade: \cf2\b0 Modelos\cf1\b 
+\par \cf0\b0 Descri\f1\'e7\'e3o: A entidade Modelos armazena os dados dos modelos de autom\'f3veis, como nome, tipo, maior fabricante,etc.
+\par Atributos: Id_modelo, Nome, Tipo("Carro", "Moto"), Maior_fabricante, Peso, Ano_lancamento
+\par Rela\'e7\'f5es: Marcas Cont\'e9m Modelos (1,n) (1,n)
+\par \f0 
+\par \cf1\b 046 - Atributo: \cf2\b0 Moto\cf1\b 
+\par \cf0\b0 Enum ("Carro", "Moto") Not Null, tipo do veiculo
+\par 
+\par \cf1\b 047 - Atributo: \cf2\b0 Moto\cf1\b 
+\par \cf0\b0 Enum("Carro", "Moto"), tipo do veiculo
+\par 
+\par \cf1\b 048 - Rela\f1\'e7\'e3o: \cf2\b0 Necessita\cf1\b 
+\par \cf0\b0\f0 Veiculo Necessita Servicos (1,n) (0,n)
+\par 
+\par \cf1\b 049 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Varchar(60) Not Null, nome do funcionario
+\par 
+\par \cf1\b 050 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Varchar(30) Not Null, nome da peca
+\par 
+\par \cf1\b 051 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Varchar(30) Not Null, nome do modelo
+\par 
+\par \cf1\b 052 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Varchar(60) Not Null, nome do cliente no pagamento
+\par 
+\par \cf1\b 053 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Varchar(30) Not Null, nome da marca
+\par 
+\par \cf1\b 054 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Varchar(30) Not Null, nome da empresa fornecedora
+\par 
+\par \cf1\b 055 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 Varchar(60) Not Null, nome do cliente na ordem de servico
+\par 
+\par \cf1\b 056 - Atributo: \cf2\b0 Nome\cf1\b 
+\par \cf0\b0 varchar(60) Not Null, nome do cliente
+\par 
+\par \cf1\b 057 - Atributo: \cf2\b0 Numero\cf1\b 
+\par \cf0\b0 varchar(12) not null, Numero do cliente
+\par 
+\par \cf1\b 058 - Entidade: \cf2\b0 Ordens de servicos\cf1\b 
+\par \cf0\b0 Descri\f1\'e7\'e3o: A entidade Ordens de servico armazena os dados sobre as ordens de servi\'e7o de cada cliente, como nome, veiculo, servi\'e7o,etc.
+\par Atributos: Id_ordem, Nome, Veiculo, Servico, Preco, Tempo_estimado
+\par Rela\'e7\'f5es: Servicos Geram Ordens de servico (1,n) (1,n), Funcionarios Gerenciam Ordens de servico (1,n) (1,n), Ordens de servico Precisa Pagamentos (1,1) (1,n)
+\par \f0 
+\par \cf1\b 059 - Entidade: \cf2\b0 Pagamentos\cf1\b 
+\par \cf0\b0 Descri\f1\'e7\'e3o: A entidade Pagamentos armazena os dados dos pagamentos realizados, como nome, CPF, valor,etc.
+\par Atributos: Id_pagamento, Nome, CPF, Valor, Desconto, Tipo("Debito", "Credito", "Pix")
+\par Rela\'e7\'f5es: Ordens de servico Precisa Pagamentos (1,1) (1,n)
+\par \f0 
+\par \cf1\b 060 - Atributo: \cf2\b0 Peca_entregue\cf1\b 
+\par \cf0\b0 Varchar(30) Not Null, a peca que a fornecedora entrega
+\par 
+\par \cf1\b 061 - Atributo: \cf2\b0 Peca_utilizada\cf1\b 
+\par \cf0\b0 Varchar(60) Not Null, pecas utilizadas no servico
+\par 
+\par \cf1\b 062 - Entidade: \cf2\b0 Pecas\cf1\b 
+\par \cf0\b0 Descri\f1\'e7\'e3o: A entidade Pecas armazena os dados das pe\'e7as da oficina, como nome, peso, tipo,etc.
+\par Atributos: Id_peca, Nome, Peso, Tipo, Material, Carro_mais_usado
+\par Rela\'e7\'f5es: Fornecedores Entregam Pecas (1,n) (1,n)
+\par \f0 
+\par \cf1\b 063 - Rela\f1\'e7\'e3o: \cf2\b0 Pede\cf1\b 
+\par \cf0\b0\f0 Cliente Pede Servicos (1,n) (0,n)
+\par 
+\par \cf1\b 064 - Atributo: \cf2\b0 Peso\cf1\b 
+\par \cf0\b0 Float Not Null, peso base do modelo
+\par 
+\par \cf1\b 065 - Atributo: \cf2\b0 Peso\cf1\b 
+\par \cf0\b0 Float Not Null, peso da peca
+\par 
+\par \cf1\b 066 - Atributo: \cf2\b0 Peso\cf1\b 
+\par \cf0\b0 Float Not Null, peso do veiculo
+\par 
+\par \cf1\b 067 - Atributo: \cf2\b0 Pix\cf1\b 
+\par \cf0\b0 Enum("Debito", "Credito", "Pix") Default "Credito", o tipo de pagamento escolhido do cliente
+\par 
+\par \cf1\b 068 - Rela\f1\'e7\'e3o: \cf2\b0 Precisa\cf1\b 
+\par \cf0\b0\f0 Ordens de servico Precisa Pagamento (1,1) (1,n)
+\par 
+\par \cf1\b 069 - Atributo: \cf2\b0 Preco\cf1\b 
+\par \cf0\b0 Decimal(5,2) Not Null, o preco das pecas e da entrega da fornecedora
+\par 
+\par \cf1\b 070 - Atributo: \cf2\b0 Preco\cf1\b 
+\par \cf0\b0 Decimal(4,2) Not Null, preco do servico
+\par 
+\par \cf1\b 071 - Atributo: \cf2\b0 Preco\cf1\b 
+\par \cf0\b0 Decimal(4,2) Not Null, preco total da ordem de servico
+\par 
+\par \cf1\b 072 - Atributo: \cf2\b0 Salario\cf1\b 
+\par \cf0\b0 Decimal(5,2) Not Null, salario do funcionario
+\par 
+\par \cf1\b 073 - Atributo: \cf2\b0 Servico\cf1\b 
+\par \cf0\b0 Varchar(80) Not Null, servico realizado
+\par 
+\par \cf1\b 074 - Entidade: \cf2\b0 Servicos\cf1\b 
+\par \cf0\b0 Descri\f1\'e7\'e3o: A entidade Clientes armazena os dados dos clientes, como nome, data de nascimento, CPF,etc.
+\par Atributos: Id_cliente, Nome, CPF, Data_nasc, Endereco, Numero
+\par Rela\'e7\'f5es: Cliente Pede Servi\'e7os (1,n) (0,n), Veiculos Necessitam Servi\'e7os (1,n) (0,n), Servi\'e7os Geram Ordens de servi\'e7os (1,n) (1,n)
+\par \f0 
+\par \cf1\b 075 - Atributo: \cf2\b0 Status_veiculo\cf1\b 
+\par \cf0\b0 Enum("Ativo", "Inativo") Default "Ativo", Status do veiculo
+\par 
+\par \cf1\b 076 - Atributo: \cf2\b0 Tempo_entrega\cf1\b 
+\par \cf0\b0 Date Not Null, o prazo de entrega das pecas da fornecedora
+\par 
+\par \cf1\b 077 - Atributo: \cf2\b0 Tempo_estimado\cf1\b 
+\par \cf0\b0 Date Not Null, tempo estimado da ordem de servico ser feita
+\par 
+\par \cf1\b 078 - Atributo: \cf2\b0 Tempo_estimado\cf1\b 
+\par \cf0\b0 Date Not Null, tempo estimado do servico
+\par 
+\par \cf1\b 079 - Atributo: \cf2\b0 Tipo\cf1\b 
+\par \cf0\b0 Enum ("Carro", "Moto") Not Null, tipo do veiculo
+\par 
+\par \cf1\b 080 - Atributo: \cf2\b0 Tipo\cf1\b 
+\par \cf0\b0 Varchar(30) Not Null, tipo da peca
+\par 
+\par \cf1\b 081 - Atributo: \cf2\b0 Tipo\cf1\b 
+\par \cf0\b0 Enum("Debito", "Credito", "Pix") Default "Credito", o tipo de pagamento escolhido do cliente
+\par 
+\par \cf1\b 082 - Atributo: \cf2\b0 Tipo\cf1\b 
+\par \cf0\b0 Enum("Carro", "Moto"), tipo do veiculo
+\par 
+\par \cf1\b 083 - Atributo: \cf2\b0 Tipo\cf1\b 
+\par \cf0\b0 Varchar(60) Not Null, tipo do servico
+\par 
+\par \cf1\b 084 - Atributo: \cf2\b0 Valor\cf1\b 
+\par \cf0\b0 Decimal(5,2) Not Null, valor do pagamento
+\par 
+\par \cf1\b 085 - Atributo: \cf2\b0 Veiculo\cf1\b 
+\par \cf0\b0 Varchar(30) Not Null, nome do veiculo do cliente na ordem de servico
+\par 
+\par \cf1\b 086 - Entidade: \cf2\b0 Veiculos\cf1\b 
+\par \cf0\b0 Descri\f1\'e7\'e3o: A entidade Veiculos armazena os dados dos autom\'f3veis, como Tipo, Marca, Modelo,etc.
+\par Atributos: Id_veiculo, Tipo("Carro", "Moto"), Marca, Modelo, Peso, Status("Ativo", "Inativo")
+\par Rela\'e7\'f5es: Veiculos Necessitam Servi\'e7os (1,n) (0,n)
+\par \f0 
+\par 
+\par }
+ 
