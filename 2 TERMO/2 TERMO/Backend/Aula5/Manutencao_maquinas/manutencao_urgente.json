@@ -1,0 +1,12 @@
+[
+   {
+      "id": 1,
+      "nome": "Torno_CNC",
+      "horasUso": 1200
+   },
+   {
+      "id": 3,
+      "nome": "Prensa_Hidraulica",
+      "horasUso": 1500
+   }
+]
